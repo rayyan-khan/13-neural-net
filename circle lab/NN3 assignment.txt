@@ -1,0 +1,25 @@
+This second back propagation lab takes a single argument,
+an inequality related to a circle, in the form of "x*x+y*y<1.1"
+where the less than may be any one of <, <=, >, or >= and the 1.1
+may be any real in [.8,1.2].  The submitted script is to construct
+a neural network according to the same standards as in the first
+back propagation lab, and to output that NN.
+
+The NN that the submitted script is to determine takes either two
+arguments, x and y, or three, if a bias is to be included.  There
+is one single output which is whether (x,y) satisfies the inequality
+that the script is given.  x and y are guaranteed to be in [-1.5, 1.5].
+The submitted script has 100 seconds to determine a neural net.
+It may output more than one, the most recent one is the one that the
+grader will evaluate.  Timing out is OK.
+
+When the grader receives the neural net that the submitted script output,
+it will construct the NN internally and throw 100000 random points (within
+the above bounding box) at the NN and determine whether the NN classifies
+the point correctly.  If the NN outputs a .5 or greater, it is construed to
+mean that the NN is claiming that the inequality is satisfied.  Less than
+.5 implies that the NN has determined that the point does not satisfy the
+inequality.  The grader will never test with a point that is exactly on the
+circle.
+
+The aim is for the NN to classify 99+% of the points thrown at it correctly.
